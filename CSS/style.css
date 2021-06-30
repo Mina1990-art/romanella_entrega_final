@@ -1,0 +1,308 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header-logo {
+  width: 100px;
+  margin: 1rem;
+}
+
+.info-section {
+  min-height: min-height;
+  margin: 1rem;
+}
+
+.info-section p {
+  margin-bottom: 0;
+}
+
+.element-content {
+  margin: 1rem;
+}
+
+/***INDEX***/
+.banner {
+  height: 22rem;
+}
+
+.banner-descripcion-contraste {
+  color: #3d3a3a;
+}
+
+.titulo-selector {
+  font-family: "Parisienne", cursive;
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.container {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card-title-format {
+  font-family: "Parisienne", cursive;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #000000;
+}
+
+/**efecto para que la imagen del selector se ponga  gris**/
+.card-efect:hover {
+  filter: grayscale(80);
+}
+
+/**video**/
+.videos {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/*** CONTACTO-HTML ***/
+.contact-form {
+  margin: 2rem;
+}
+
+.comment-box {
+  height: 9rem;
+}
+
+/*** QUIENES SOMOS ***/
+.nosotros-container {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.profile-text-form {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.profile-text-form font {
+  size: 1rem;
+}
+
+.mision-vision-title-form {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.card-box-style {
+  width: 18rem;
+}
+
+/**PIE DE PAGINA**/
+/*formato para la etiqueta footer*/
+footer {
+  background-color: #5c5858;
+  color: #ffffff;
+}
+
+/*formato para clase  footer y  sub clases*/
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer .footer-list {
+  margin: 2rem;
+  display: flex;
+}
+.footer .footer-list ul {
+  /*margen a la derecha asi se separan una lista de la otra*/
+  margin-right: 2rem;
+  /*cuando pasamos e cursor se ve como also  sobre lo que se puede hacer click*/
+  cursor: pointer;
+}
+.footer .footer-list li {
+  /*elimnar el punto que  viene por defaul en las listas*/
+  list-style: none;
+  /*separa el contenido del elemento de abajo*/
+  margin-bottom: 1rem;
+}
+
+.footer-link-main {
+  /*Aummento del peso de la letra*/
+  font-weight: 500;
+  /*reduccion de tamaño*/
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 0;
+}
+
+.footer-link-other {
+  /*Aummento del peso de la letra*/
+  font-weight: 500;
+  /*reduccion de tamaño*/
+  font-size: 0.8rem;
+  color: #b9b8b8;
+  letter-spacing: 0rem;
+  display: flex;
+  /*formato para que se siga mostrando como  columan pero  ocupe todo su espacio*/
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  padding: 0;
+}
+
+.footer-list-first {
+  /*Aummento del peso de la letra*/
+  font-weight: 500;
+  /*reduccion de tamaño*/
+  font-size: 0.8rem;
+  letter-spacing: 0rem;
+  display: flex;
+  /*formato para que se siga mostrando como  columan pero  ocupe todo su espacio*/
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ffffff;
+}
+.footer-list-first li:hover a:hover {
+  color: #ffffff;
+}
+
+.footer-list-second {
+  /*Aummento del peso de la letra*/
+  font-weight: 500;
+  /*reduccion de tamaño*/
+  font-size: 0.8rem;
+  color: #b9b8b8;
+  letter-spacing: 0rem;
+  display: flex;
+  /*formato para que se siga mostrando como  columan pero  ocupe todo su espacio*/
+  flex-direction: column;
+  justify-content: space-between;
+  /*color de  fuente para la segunda lista*/
+  color: #b9b8b8;
+  /*Estilo solo al primer item de la segunda sub lista*/
+  /*: Aplicar estilos al a todos los ementos menos al primero de la segunda  sublista*/
+}
+.footer-list-second li {
+  color: #b9b8b8;
+  cursor: pointer;
+  margin: 0 0.6rem;
+}
+.footer-list-second li:first-child {
+  color: #ffffff;
+}
+.footer-list-second li:hover a:hover {
+  color: #ffffff;
+}
+
+.footer-list-third {
+  /*Aummento del peso de la letra*/
+  font-weight: 500;
+  /*reduccion de tamaño*/
+  font-size: 0.8rem;
+  color: #b9b8b8;
+  letter-spacing: 0rem;
+  display: flex;
+  /*formato para que se siga mostrando como  columan pero  ocupe todo su espacio*/
+  flex-direction: column;
+  justify-content: space-between;
+  color: #b9b8b8;
+  /*Efecto para todos SALVO al primer elmento de la segunda  sublista,*/
+  /*con esto cuando se pasa el cursor por los  elementos de la segunda  sublista, se van poniendo en blanco, pero el primer elemento de la lista no se altera*/
+  /*Estilo solo al primer item de la segunda sub lista*/
+  /*: Aplicar estilos al a todos los ementos menos al primero de la segunda  sublista*/
+}
+.footer-list-third li:not(:first-of-type):hover {
+  color: #ffffff;
+}
+.footer-list-third li:first-child {
+  color: #ffffff;
+}
+.footer-list-third li:hover a:hover {
+  color: #ffffff;
+}
+
+/*formato para iconos de redes sociales*/
+.footer-socials {
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+.footer-socials i {
+  font-size: 1.7rem;
+  color: #b9b8b8;
+  cursor: pointer;
+  margin: 0 0.6rem;
+}
+.footer-socials i:hover {
+  color: #ffffff;
+}
+
+/*sub footer*/
+.footer-subfooter {
+  /*flexibilizamos el contenido, con lo que los dos  elementos (div y nav) se nos ponen uno al lado del otro*/
+  display: flex;
+  justify-content: space-between;
+  /*linea para separa del footer principal*/
+  border-top: #b9b8b8 1px solid;
+  padding-top: 1rem;
+  font-size: 0.7rem;
+}
+
+.footer-subfooter-first {
+  /*flexibilizamos el contenido del div entro del subfooter con lo que los elementos se nos ponen uno al lado del otro*/
+  display: flex;
+  margin-left: 2rem;
+}
+.footer-subfooter-first p:nth-child(3) {
+  /* con nth-child le decimos a que hijo en especifico del   dib queremos apuntarle, el n entre () es el numero del elemento*/
+  color: #b9b8b8;
+  margin-left: 1rem;
+}
+
+.footer-subfooter-second ul {
+  /*flexibilizamos el contenido del nav entro del subfooter con lo que los elementos se nos ponen uno al lado del otro*/
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-subfooter-second ul li {
+  /*sacamos los puntos del costado*/
+  list-style: none;
+  margin: 0 1rem;
+  color: #b9b8b8;
+  cursor: pointer;
+}
+.footer-subfooter-second ul li:hover a:hover {
+  color: #ffffff;
+}
+
+/*Whatapp*/
+.whatsapp-format {
+  color: #087979;
+  font-size: 48px;
+  position: fixed;
+  bottom: 3rem;
+  right: 0;
+  z-index: 6;
+}
+
+/*** INSTALACIONES ***/
+.instalaciones-container {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.instalaciones-text-form {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.instalaciones-text-form font {
+  size: 1rem;
+}
+.instalaciones-text-form li {
+  margin-left: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */

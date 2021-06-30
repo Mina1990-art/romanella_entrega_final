@@ -1,0 +1,215 @@
+/**PIE DE PAGINA**/
+
+/*formato para la etiqueta footer*/
+footer{
+    background-color: rgb(92, 88, 88);
+    color: $white;
+}
+
+@mixin footer-text {
+    font: {
+      /*Aummento del peso de la letra*/
+      weight: 500;
+      /*reduccion de tamaño*/
+      size: $font-size-footer;
+
+    }
+    color:$grey;
+    letter-spacing: 0rem;
+    display: flex;
+    /*formato para que se siga mostrando como  columan pero  ocupe todo su espacio*/
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+/*formato para clase  footer y  sub clases*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .footer-list {
+        margin: 2rem;
+        display: flex;
+
+        ul {
+            /*margen a la derecha asi se separan una lista de la otra*/
+            margin-right: 2rem;
+            /*cuando pasamos e cursor se ve como also  sobre lo que se puede hacer click*/
+            cursor: pointer;
+        }
+        
+        li {
+            /*elimnar el punto que  viene por defaul en las listas*/
+            list-style: none;
+            /*separa el contenido del elemento de abajo*/
+            margin-bottom: 1rem;
+        }
+        
+        }
+    }
+
+    .footer-link-main{
+        font: {
+            /*Aummento del peso de la letra*/
+            weight: 500;
+            /*reduccion de tamaño*/
+            size: $font-size-footer;
+      
+          }
+        text-decoration: none;
+        color: $white;
+        padding: 0;
+    }
+
+    .footer-link-other{
+        @include footer-text;
+        text-decoration: none;
+        padding: 0;
+    }
+
+    .footer-list-first {
+        /*Aummento del peso de la letra*/
+        font-weight: 500;
+        /*reduccion de tamaño*/
+        font-size: 0.8rem;
+        letter-spacing: 0rem;
+        display: flex;
+        /*formato para que se siga mostrando como  columan pero  ocupe todo su espacio*/
+        flex-direction: column;
+        justify-content: space-between;
+        color: $white;
+
+        li:hover {
+            a:hover{
+                color: $white;
+            }
+        } 
+      }
+
+    .footer-list-second {
+        @include footer-text;
+        /*color de  fuente para la segunda lista*/
+        color: $grey;
+
+        li{
+            color: $grey;
+            cursor: pointer;
+            margin:0 0.6rem;
+        }
+    
+        /*Estilo solo al primer item de la segunda sub lista*/
+        /*: Aplicar estilos al a todos los ementos menos al primero de la segunda  sublista*/
+
+        li:first-child {
+            
+            color: $white;
+        }
+
+       li:hover {
+            a:hover{
+                color: $white;
+            }
+        }  
+        
+    }
+    
+    .footer-list-third {
+        @include footer-text;
+        color: $grey;
+    
+        /*Efecto para todos SALVO al primer elmento de la segunda  sublista,*/
+        /*con esto cuando se pasa el cursor por los  elementos de la segunda  sublista, se van poniendo en blanco, pero el primer elemento de la lista no se altera*/
+        li:not(:first-of-type):hover {
+            color: $white;
+        }
+    
+        /*Estilo solo al primer item de la segunda sub lista*/
+        /*: Aplicar estilos al a todos los ementos menos al primero de la segunda  sublista*/
+        li:first-child {
+        color: $white;
+        }
+
+        li:hover {
+            a:hover{
+                color: $white;
+            }
+        } 
+    }
+
+    
+    /*formato para iconos de redes sociales*/
+    .footer-socials {
+        margin-top: 2rem;
+        margin-right: 2rem;
+
+        i{
+            font-size: 1.7rem;
+            color: $grey;
+            cursor: pointer;
+            margin:0 0.6rem;
+        }
+
+        i:hover {
+            color: $white;
+        }  
+    }
+
+
+
+
+/*sub footer*/
+.footer-subfooter{
+    /*flexibilizamos el contenido, con lo que los dos  elementos (div y nav) se nos ponen uno al lado del otro*/
+    display: flex;
+    justify-content: space-between;
+    /*linea para separa del footer principal*/
+    border-top: $grey 1px solid;
+    padding-top: 1rem;
+    font-size: $font-size-footer - 0.1rem;
+}
+
+.footer-subfooter-first {
+    /*flexibilizamos el contenido del div entro del subfooter con lo que los elementos se nos ponen uno al lado del otro*/
+    display: flex;
+    margin-left: $margin-size * 2;
+
+    p:nth-child(3) {
+        /* con nth-child le decimos a que hijo en especifico del   dib queremos apuntarle, el n entre () es el numero del elemento*/
+        color:$grey;
+        margin-left: $margin-size;
+    }
+}
+
+.footer-subfooter-second {
+
+    ul{
+    /*flexibilizamos el contenido del nav entro del subfooter con lo que los elementos se nos ponen uno al lado del otro*/
+    display: flex;
+    flex-wrap: wrap ;
+
+    li {
+        /*sacamos los puntos del costado*/
+        list-style: none;
+        margin: 0 $margin-size;
+        color: $grey;
+        cursor: pointer;
+    }
+    li:hover {
+        a:hover{
+            color: $white;
+            }
+    }
+    }
+
+}
+
+/*Whatapp*/
+.whatsapp-format{
+    color: rgb(8, 121, 121);
+    font-size: 48px;
+    position: fixed;
+    bottom:$margin-size + 2rem;
+    right:0;
+    z-index: 6
+}
+

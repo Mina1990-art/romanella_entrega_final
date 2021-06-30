@@ -1,0 +1,38 @@
+/***INDEX***/
+
+.banner{
+    height: $height + 4rem;
+}
+
+.banner-descripcion-contraste{
+    color: rgb(61, 58, 58);
+}
+
+@mixin texto-titulo {
+    font: {
+      family: $font-family;
+      weight: $font-weigh;
+    }
+  }
+
+
+.titulo-selector
+{
+    @include texto-titulo;
+    margin-top: $margin-size;
+    margin-bottom: $margin-size;
+}
+
+.container{
+    margin-top: $margin-size;
+    margin-bottom: $margin-size * 2;
+}
+.card-title-format{
+    @include texto-titulo;
+    font-size: 2rem;
+    color: $black;
+}
+   /**efecto para que la imagen del selector se ponga  gris**/
+.card-efect:hover {
+    filter:grayscale(80);
+}
